@@ -13,14 +13,10 @@ const rect = svg
   .attr('x', 10)
   .attr('y', 200 - 80);
 
-<<<<<<< HEAD
 group
   .append('text')
   .attr('x', 180)
   .attr('y', 25)
   .attr('fill', 'black')
   .text('City')
-  .style('font-family', 'arial');<q></q>
-=======
-// console.log(rect);
->>>>>>> lesson2
+  .style('font-family', 'arial');
