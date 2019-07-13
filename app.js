@@ -1,3 +1,5 @@
+// Enter Selection
+
 const data = [
   { width: 200, height: 200, fill: 'purple' },
   { width: 100, height: 100, fill: 'yellow' },
@@ -13,4 +15,4 @@ const rect = svg
   .attr('height', d => d.height)
   .attr('fill', d => d.fill)
   .attr('x', 10)
-  .attr('y', 200 - 80);
+  .attr('y', 10);
