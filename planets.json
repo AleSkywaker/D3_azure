@@ -1,22 +1,56 @@
 [
   {
-    "radius": 50,
+    "radius": 5,
+    "distance": 20,
+    "fill": "darkgray",
+    "name": "Mercurio"
+  },
+  {
+    "radius": 8,
+    "distance": 40,
+    "fill": "chocolate",
+    "name": "Venus"
+  },
+  {
+    "radius": 12,
+    "distance": 60,
+    "fill": "blue",
+    "name": "Tierra"
+  },
+  {
+    "radius": 6,
+    "distance": 80,
+    "fill": "coral",
+    "name": "Marte"
+  },
+  {
+    "radius": 30,
     "distance": 110,
-    "fill": "orange"
+    "fill": "darkseagreen",
+    "name": "Jupiter"
   },
   {
-    "radius": 70,
-    "distance": 260,
-    "fill": "red"
+    "radius": 26,
+    "distance": 130,
+    "fill": "coral",
+    "name": "saturno"
   },
   {
-    "radius": 35,
-    "distance": 400,
-    "fill": "brown"
+    "radius": 16,
+    "distance": 150,
+    "fill": "deepskyblue",
+    "name": "Urano"
   },
   {
-    "radius": 55,
-    "distance": 530,
-    "fill": "green"
+    "radius": 17,
+    "distance": 170,
+    "fill": "darkturquoise",
+    "name": "Neptuno"
+  },
+  {
+    "radius": 4,
+    "distance": 190,
+    "fill": "dimgray",
+    "name": "Pluton"
   }
 ]
