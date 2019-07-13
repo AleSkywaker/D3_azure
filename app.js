@@ -16,3 +16,12 @@ const rect = svg
   .attr('fill', d => d.fill)
   .attr('x', 10)
   .attr('y', 10);
+
+rect
+  .enter()
+  .append('rect')
+  .attr('width', (d, i, n) => d.width)
+  .attr('height', d => d.height)
+  .attr('fill', d => d.fill)
+  .attr('x', 10)
+  .attr('y', 10);
