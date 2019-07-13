@@ -8,9 +8,9 @@ const data = [
 
 const svg = d3.select('svg');
 // append shapes to svg container
-const rect = svg
-  .selectAll('rect')
-  .data(data)
+const rect = svg.selectAll('rect').data(data);
+
+rect
   .attr('width', (d, i, n) => d.width)
   .attr('height', d => d.height)
   .attr('fill', d => d.fill)
