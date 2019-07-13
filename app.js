@@ -4,7 +4,10 @@
 const svg = d3.select('svg');
 
 d3.json('planetas.json').then(datos => {
-  const circulos = svg.selectAll('circle').data(datos);
+  //Añadimos lo anterior a un grupo
+  const svg = d3.select('svg');
+  const grupo = svg.append('g').attr('transform', 'translate(25,0)');
+  const circulos = grupo.selectAll('circle').data(datos);
 
   //Añadimos circulos en elementos existentes en DOM
   circulos
