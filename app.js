@@ -25,3 +25,5 @@ rect
   .attr('fill', d => d.fill)
   .attr('x', 10)
   .attr('y', 10);
+
+console.log(rect);
