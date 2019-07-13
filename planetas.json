@@ -13,43 +13,43 @@
   },
   {
     "radius": 12,
-    "distance": 60,
+    "distance": 70,
     "fill": "blue",
     "name": "Tierra"
   },
   {
     "radius": 6,
-    "distance": 80,
+    "distance": 95,
     "fill": "coral",
     "name": "Marte"
   },
   {
-    "radius": 30,
-    "distance": 110,
+    "radius": 28,
+    "distance": 140,
     "fill": "darkseagreen",
     "name": "Jupiter"
   },
   {
-    "radius": 26,
-    "distance": 130,
+    "radius": 22,
+    "distance": 195,
     "fill": "coral",
     "name": "saturno"
   },
   {
     "radius": 16,
-    "distance": 150,
+    "distance": 240,
     "fill": "deepskyblue",
     "name": "Urano"
   },
   {
     "radius": 17,
-    "distance": 170,
+    "distance": 280,
     "fill": "darkturquoise",
     "name": "Neptuno"
   },
   {
     "radius": 4,
-    "distance": 190,
+    "distance": 305,
     "fill": "dimgray",
     "name": "Pluton"
   }

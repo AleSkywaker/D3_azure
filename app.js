@@ -1,29 +1,26 @@
-// Enter Selection
+// Conectando a una fuente externa
 
-const data = [
-  { width: 200, height: 200, fill: 'purple' },
-  { width: 100, height: 100, fill: 'yellow' },
-  { width: 50, height: 50, fill: 'green' }
-];
-
+//Seleccionamos el elemento svg
 const svg = d3.select('svg');
-// append shapes to svg container
-const rect = svg.selectAll('rect').data(data);
 
-rect
-  .attr('width', (d, i, n) => d.width)
-  .attr('height', d => d.height)
-  .attr('fill', d => d.fill)
-  .attr('x', 10)
-  .attr('y', 10);
+d3.json('planetas.json').then(datos => {
+  const circulos = svg.selectAll('circle').data(datos);
 
-rect
-  .enter()
-  .append('rect')
-  .attr('width', (d, i, n) => d.width)
-  .attr('height', d => d.height)
-  .attr('fill', d => d.fill)
-  .attr('x', 10)
-  .attr('y', 10);
+  //Añadimos circulos en elementos existentes en DOM
+  circulos
+    .attr('cy', 100)
+    .attr('cx', d => d.distance)
+    .attr('r', d => d.radius)
+    .attr('fill', d => d.fill);
 
-console.log(rect);
+  // Añadimos elementos on the fly
+  circulos
+    .enter()
+    .append('circle')
+    .attr('r', d => d.radius)
+    .attr('cx', d => d.distance)
+    .attr('cy', 100)
+    .attr('fill', d => d.fill);
+
+  console.log(circulos);
+});
