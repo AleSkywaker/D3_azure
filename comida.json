@@ -1,42 +1,42 @@
 [
   {
     "nombre": "lentejas",
-    "altura": 90
+    "ordenes": 90
   },
   {
     "nombre": "Spaguethi",
-    "altura": 230
+    "ordenes": 230
   },
   {
     "nombre": "Hamburguesa",
-    "altura": 60
+    "ordenes": 60
   },
   {
     "nombre": "Sopa",
-    "altura": 50
+    "ordenes": 50
   },
   {
     "nombre": "Patatas Bravas",
-    "altura": 150
+    "ordenes": 150
   },
   {
     "nombre": "Croquetas",
-    "altura": 200
+    "ordenes": 200
   },
   {
     "nombre": "Ensalada",
-    "altura": 70
+    "ordenes": 70
   },
   {
     "nombre": " Arroz tres delicias",
-    "altura": 80
+    "ordenes": 80
   },
   {
     "nombre": "Frutti di mari",
-    "altura": 100
+    "ordenes": 100
   },
   {
     "nombre": "Lubina",
-    "altura": 50
+    "ordenes": 50
   }
 ]

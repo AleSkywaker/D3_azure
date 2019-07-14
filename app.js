@@ -1,11 +1,13 @@
-// Linear Scale
+// min.max,extent
 
 //Seleccionamos el elemento svg
 const svg = d3.select('svg');
 
 d3.json('comida.json').then(datos => {
-  //Añadimos ldatos a los rectangulos
-
+  //creamos un variable min
+  const min = d3.min(datos, d => d.ordenes);
+  const max = d3.max(datos, d => d.ordenes);
+  console.log(min, max);
   const yScale = d3
     .scaleLinear()
     .domain([0, 250])
@@ -22,7 +24,7 @@ d3.json('comida.json').then(datos => {
 
   rects
     .attr('width', xScale.bandwidth)
-    .attr('height', d => yScale(d.altura))
+    .attr('height', d => yScale(d.ordenes))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre));
 
@@ -30,7 +32,7 @@ d3.json('comida.json').then(datos => {
     .enter()
     .append('rect')
     .attr('width', xScale.bandwidth)
-    .attr('height', d => yScale(d.altura))
+    .attr('height', d => yScale(d.ordenes))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre));
 });
