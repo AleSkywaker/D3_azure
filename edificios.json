@@ -8,11 +8,11 @@
     "altura": 632
   },
   {
-    "name": "Abraj Al Bait",
+    "nombre": "Abraj Al Bait",
     "altura": 601
   },
   {
-    "name": "Ping An Finance Center",
+    "nombre": "Ping An Finance Center",
     "altura": 599
   },
   {
@@ -24,19 +24,19 @@
     "altura": 541
   },
   {
-    "name": "CTF Finance Centre",
+    "nombre": "CTF Finance Centre",
     "altura": 530
   },
   {
-    "name": " Taipei 101",
+    "nombre": " Taipei 101",
     "altura": 508
   },
   {
-    "name": "Shanghai World Financial Center",
+    "nombre": "Shanghai World Financial Center",
     "altura": 491
   },
   {
-    "name": "International Commerce Centre",
+    "nombre": "International Commerce Centre",
     "altura": 484
   }
 ]

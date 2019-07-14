@@ -10,6 +10,9 @@ d3.json('edificios.json').then(datos => {
     .scaleLinear()
     .domain([0, 1000])
     .range([0, 500]);
+
+  // Band Scale
+
   const rects = svg.selectAll('rect').data(datos);
 
   rects
