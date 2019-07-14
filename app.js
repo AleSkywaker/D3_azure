@@ -7,7 +7,9 @@ d3.json('comida.json').then(datos => {
   //creamos un variable min
   const min = d3.min(datos, d => d.ordenes);
   const max = d3.max(datos, d => d.ordenes);
+  const extents = d3.extent(datos, d => d.ordenes);
   console.log(min, max);
+  console.log(extents);
   const yScale = d3
     .scaleLinear()
     .domain([0, 250])
