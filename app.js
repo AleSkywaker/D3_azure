@@ -14,7 +14,9 @@ d3.json('comida.json').then(datos => {
   const xScale = d3
     .scaleBand()
     .domain(datos.map(item => item.nombre))
-    .range([0, 500]);
+    .range([0, 500])
+    .paddingInner(0.1)
+    .paddingOuter(0.1);
 
   const rects = svg.selectAll('rect').data(datos);
 
