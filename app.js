@@ -5,10 +5,19 @@ const svg = d3
   .select('.canvas')
   .append('svg')
   .attr('width', 500)
-  .attr('height', 220);
+  .attr('height', 320);
 
 //Creamos margenes
 const margin = { top: 20, right: 20, bottom: 80, left: 80 };
+const graficoAncho = 500 - margin.left - margin.right;
+const graficoAlto = 320 - margin.top - margin.bottom;
+
+// Creamos grupo
+const graph = svg
+  .append('g')
+  .attr('width', graficoAncho)
+  .attr('height', graficoAlto)
+  .attr('transform', `translate(${margin.left},${margin.top})`);
 
 d3.json('comida.json').then(datos => {
   //creamos un variable min
@@ -19,16 +28,16 @@ d3.json('comida.json').then(datos => {
   const yScale = d3
     .scaleLinear()
     .domain([0, max])
-    .range([0, 200]);
+    .range([0, graficoAlto]);
   // Band Scale
   const xScale = d3
     .scaleBand()
     .domain(datos.map(item => item.nombre))
-    .range([0, 500])
+    .range([0, graficoAncho])
     .paddingInner(0.1)
     .paddingOuter(0.1);
 
-  const rects = svg.selectAll('rect').data(datos);
+  const rects = graph.selectAll('rect').data(datos);
 
   rects
     .attr('width', xScale.bandwidth)
