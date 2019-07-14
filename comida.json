@@ -8,11 +8,11 @@
     "altura": 230
   },
   {
-    "name": "Hamburguesa",
+    "nombre": "Hamburguesa",
     "altura": 60
   },
   {
-    "name": "Sopa",
+    "nombre": "Sopa",
     "altura": 50
   },
   {
@@ -24,19 +24,19 @@
     "altura": 200
   },
   {
-    "name": "Ensalada",
+    "nombre": "Ensalada",
     "altura": 70
   },
   {
-    "name": " Arroz tres delicias",
+    "nombre": " Arroz tres delicias",
     "altura": 80
   },
   {
-    "name": "Frutti di mari",
+    "nombre": "Frutti di mari",
     "altura": 100
   },
   {
-    "name": "Lubina",
+    "nombre": "Lubina",
     "altura": 50
   }
 ]
