@@ -7,6 +7,9 @@ const svg = d3
   .attr('width', 500)
   .attr('height', 220);
 
+//Creamos margenes
+const margin = { top: 20, right: 20, bottom: 80, left: 80 };
+
 d3.json('comida.json').then(datos => {
   //creamos un variable min
   const min = d3.min(datos, d => d.ordenes);
