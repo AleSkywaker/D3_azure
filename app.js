@@ -40,6 +40,14 @@ d3.json('comida.json').then(datos => {
     .paddingInner(0.1)
     .paddingOuter(0.1);
 
+  // console.log(datos.length);
+  const linearColorScale = d3
+    .scaleLinear()
+    .domain([0, datos.length])
+    .range(['#572500', '#F68026']);
+
+  const colorD3 = d3.scaleOrdinal(d3.schemeSet1);
+
   const rects = graph.selectAll('rect').data(datos);
 
   rects
@@ -47,7 +55,8 @@ d3.json('comida.json').then(datos => {
     .attr('height', d => graficoAlto - yScale(d.ordenes))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre))
-    .attr('y', d => yScale(d.ordenes));
+    .attr('y', d => yScale(d.ordenes))
+    .style('fill', (d, i) => colorD3(i));
 
   rects
     .enter()
@@ -56,7 +65,8 @@ d3.json('comida.json').then(datos => {
     .attr('height', d => graficoAlto - yScale(d.ordenes))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre))
-    .attr('y', d => yScale(d.ordenes));
+    .attr('y', d => yScale(d.ordenes))
+    .style('fill', (d, i) => colorD3(i));
 
   //Crear y llamar axis
   const xAxis = d3.axisBottom(xScale);
@@ -71,5 +81,6 @@ d3.json('comida.json').then(datos => {
   xAxisGrupo
     .selectAll('text')
     .attr('transform', 'rotate(-40)')
-    .attr('text-anchor', 'end');
+    .attr('text-anchor', 'end')
+    .attr('fill', (d, i) => colorD3(i));
 });
