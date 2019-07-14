@@ -19,7 +19,7 @@ d3.json('comida.json').then(datos => {
   const rects = svg.selectAll('rect').data(datos);
 
   rects
-    .attr('width', 20)
+    .attr('width', xScale.bandwidth)
     .attr('height', d => yScale(d.altura))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => i * 30);
@@ -27,7 +27,7 @@ d3.json('comida.json').then(datos => {
   rects
     .enter()
     .append('rect')
-    .attr('width', 20)
+    .attr('width', xScale.bandwidth)
     .attr('height', d => yScale(d.altura))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => i * 30);
