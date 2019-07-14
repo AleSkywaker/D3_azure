@@ -9,11 +9,11 @@
   },
   {
     "name": "Abraj Al Bait",
-    "orders": 601
+    "altura": 601
   },
   {
     "name": "Ping An Finance Center",
-    "orders": 599
+    "altura": 599
   },
   {
     "nombre": "Lotte World Tower",
@@ -25,18 +25,18 @@
   },
   {
     "name": "CTF Finance Centre",
-    "orders": 530
+    "altura": 530
   },
   {
     "name": " Taipei 101",
-    "orders": 508
+    "altura": 508
   },
   {
     "name": "Shanghai World Financial Center",
-    "orders": 491
+    "altura": 491
   },
   {
     "name": "International Commerce Centre",
-    "orders": 484
+    "altura": 484
   }
 ]

@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "lentejas",
+    "altura": 90
+  },
+  {
+    "nombre": "Spaguethi",
+    "altura": 230
+  },
+  {
+    "name": "Hamburguesa",
+    "altura": 60
+  },
+  {
+    "name": "Sopa",
+    "altura": 50
+  },
+  {
+    "nombre": "Patatas Bravas",
+    "altura": 150
+  },
+  {
+    "nombre": "Croquetas",
+    "altura": 200
+  },
+  {
+    "name": "Ensalada",
+    "altura": 70
+  },
+  {
+    "name": " Arroz tres delicias",
+    "altura": 80
+  },
+  {
+    "name": "Frutti di mari",
+    "altura": 100
+  },
+  {
+    "name": "Lubina",
+    "altura": 50
+  }
+]
