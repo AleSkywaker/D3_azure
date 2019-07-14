@@ -1,3 +1,4 @@
 # D3_azure
 
-## Band Scale
+## min, max, extent
+
