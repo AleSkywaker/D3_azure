@@ -60,8 +60,16 @@ d3.json('comida.json').then(datos => {
 
   //Crear y llamar axis
   const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale);
+  const yAxis = d3
+    .axisLeft(yScale)
+    .ticks(5)
+    .tickFormat(d => d + ' ordenes');
 
   xAxisGrupo.call(xAxis);
   yAxisGrupo.call(yAxis);
+
+  xAxisGrupo
+    .selectAll('text')
+    .attr('transform', 'rotate(-40)')
+    .attr('text-anchor', 'end');
 });
