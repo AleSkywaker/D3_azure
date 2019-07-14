@@ -19,6 +19,9 @@ const graph = svg
   .attr('height', graficoAlto)
   .attr('transform', `translate(${margin.left},${margin.top})`);
 
+const xAxisGrupo = graph.append('g').attr('transform', `translate(0, ${graficoAlto})`);
+const yAxisGrupo = graph.append('g').attr('transform', `translate(${0},${0})`);
+
 d3.json('comida.json').then(datos => {
   //creamos un variable min
   const min = d3.min(datos, d => d.ordenes);
@@ -52,4 +55,11 @@ d3.json('comida.json').then(datos => {
     .attr('height', d => yScale(d.ordenes))
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre));
+
+  //Crear y llamar axis
+  const xAxis = d3.axisBottom(xScale);
+  const yAxis = d3.axisLeft(yScale);
+
+  xAxisGrupo.call(xAxis);
+  yAxisGrupo.call(yAxis);
 });
