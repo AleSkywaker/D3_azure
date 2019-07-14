@@ -31,7 +31,7 @@ d3.json('comida.json').then(datos => {
   const yScale = d3
     .scaleLinear()
     .domain([0, max])
-    .range([0, graficoAlto]);
+    .range([graficoAlto, 0]);
   // Band Scale
   const xScale = d3
     .scaleBand()
@@ -44,17 +44,19 @@ d3.json('comida.json').then(datos => {
 
   rects
     .attr('width', xScale.bandwidth)
-    .attr('height', d => yScale(d.ordenes))
+    .attr('height', d => graficoAlto - yScale(d.ordenes))
     .attr('fill', 'crimson')
-    .attr('x', (d, i) => xScale(d.nombre));
+    .attr('x', (d, i) => xScale(d.nombre))
+    .attr('y', d => yScale(d.ordenes));
 
   rects
     .enter()
     .append('rect')
     .attr('width', xScale.bandwidth)
-    .attr('height', d => yScale(d.ordenes))
+    .attr('height', d => graficoAlto - yScale(d.ordenes))
     .attr('fill', 'crimson')
-    .attr('x', (d, i) => xScale(d.nombre));
+    .attr('x', (d, i) => xScale(d.nombre))
+    .attr('y', d => yScale(d.ordenes));
 
   //Crear y llamar axis
   const xAxis = d3.axisBottom(xScale);
