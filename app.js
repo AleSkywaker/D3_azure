@@ -22,7 +22,7 @@ d3.json('comida.json').then(datos => {
     .attr('width', xScale.bandwidth)
     .attr('height', d => yScale(d.altura))
     .attr('fill', 'crimson')
-    .attr('x', (d, i) => i * 30);
+    .attr('x', (d, i) => xScale(d.nombre));
 
   rects
     .enter()
@@ -30,5 +30,5 @@ d3.json('comida.json').then(datos => {
     .attr('width', xScale.bandwidth)
     .attr('height', d => yScale(d.altura))
     .attr('fill', 'crimson')
-    .attr('x', (d, i) => i * 30);
+    .attr('x', (d, i) => xScale(d.nombre));
 });
