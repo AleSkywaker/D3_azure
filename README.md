@@ -1,3 +1,3 @@
 # D3_azure
 
-## Linear Scale
+## Band Scale
