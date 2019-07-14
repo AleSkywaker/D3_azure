@@ -1,5 +1,17 @@
+.container {
+  margin-top: 4%;
+  width: 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
 svg {
   background: azure;
   border: solid 1px black;
   border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
