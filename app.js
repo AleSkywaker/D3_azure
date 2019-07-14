@@ -1,7 +1,11 @@
-// min.max,extent
+// Grupos y margenes
 
-//Seleccionamos el elemento svg
-const svg = d3.select('svg');
+//Seleccionamos el elemento con classe canvas
+const svg = d3
+  .select('.canvas')
+  .append('svg')
+  .attr('width', 500)
+  .attr('height', 220);
 
 d3.json('comida.json').then(datos => {
   //creamos un variable min
