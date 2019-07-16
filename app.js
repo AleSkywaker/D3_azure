@@ -31,7 +31,7 @@ d3.json('comida.json').then(datos => {
   const yScale = d3
     .scaleLinear()
     .domain([0, max])
-    .range([graficoAlto, 0]);
+    .range([graficoAlto, 0]); //invertir grafico
   // Band Scale
   const xScale = d3
     .scaleBand()
@@ -52,20 +52,20 @@ d3.json('comida.json').then(datos => {
 
   rects
     .attr('width', xScale.bandwidth)
-    .attr('height', d => graficoAlto - yScale(d.ordenes))
+    .attr('height', d => graficoAlto - yScale(d.ordenes)) //invertir grafico
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre))
-    .attr('y', d => yScale(d.ordenes))
+    .attr('y', d => yScale(d.ordenes)) // crear para invertir grafico
     .style('fill', (d, i) => colorD3(i));
 
   rects
     .enter()
     .append('rect')
     .attr('width', xScale.bandwidth)
-    .attr('height', d => graficoAlto - yScale(d.ordenes))
+    .attr('height', d => graficoAlto - yScale(d.ordenes)) //invertir grafico
     .attr('fill', 'crimson')
     .attr('x', (d, i) => xScale(d.nombre))
-    .attr('y', d => yScale(d.ordenes))
+    .attr('y', d => yScale(d.ordenes)) // crear para invertir grafico
     .style('fill', (d, i) => colorD3(i));
 
   //Crear y llamar axis
